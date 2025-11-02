@@ -468,6 +468,16 @@ nav.main-nav a:hover {
   }
 }
 
+@media (max-width: 480px) {
+  .how-it-works-section {
+    padding: 2rem 1rem;
+  }
+  .how-card {
+    padding: 1.5rem;
+  }
+}
+
+
 /* -------------------- Testimonials -------------------- */
 .testimonials {
   max-width: 900px;
@@ -494,6 +504,16 @@ nav.main-nav a:hover {
   box-shadow: 0 4px 15px rgba(0,0,0,0.05);
   font-style: italic;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .testimonial-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-card {
+    padding: 1.5rem;
+  }
 }
 
 /* -------------------- Footer -------------------- */
@@ -645,6 +665,11 @@ footer {
   }
 }
 
+@media (max-width: 480px) {
+  footer {
+    padding: 2rem 1rem;
+  }
+}
 
 /* -------------------- FAQ Sektion-------------------- */
 .faq-section {
@@ -851,6 +876,31 @@ html, body {
     max-height: 300px; /* tillräckligt för alla länkar */
     opacity: 1;
   }
+}
+
+@media (max-width: 768px) {
+  .benefit-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0 10px;
+  }
+
+  .benefit-card {
+    padding: 1.5rem;
+  }
+
+  .benefit-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .benefit-card p {
+    font-size: 0.95rem;
+  }
+}
+
+html, body {
+  overflow-x: hidden; /* ✅ förhindrar sidscroll */
+  width: 100%;
 }
 
 
