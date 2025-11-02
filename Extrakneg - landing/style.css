@@ -114,6 +114,21 @@ nav.main-nav a:hover {
   }
 }
 
+@media (max-width: 768px) {
+  nav.main-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #FFFFFF;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 9999; /* 🔥 viktigt: lägg ovanpå allt annat */
+  }
+}
+
 /* -------------------- Hero -------------------- */
 .hero.home {
   position: relative;
@@ -797,4 +812,46 @@ footer {
     height: 35px;
   }
 }
+
+/* ---- Fixar mobilmeny och vit kant ---- */
+@media (max-width: 768px) {
+  nav.main-nav {
+    z-index: 9999;
+  }
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+/* ----- Hamburgermenyan (animation + ikonförändring) ----- */
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* ----- Animation för slide-in meny ----- */
+@media (max-width: 768px) {
+  nav.main-nav {
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+  }
+
+  nav.main-nav.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 300px; /* tillräckligt för alla länkar */
+    opacity: 1;
+  }
+}
+
+
 

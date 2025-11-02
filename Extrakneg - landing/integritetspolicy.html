@@ -64,6 +64,19 @@
     }
   </style>
 </head>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const hamburger = document.querySelector('.hamburger');
+  const nav = document.querySelector('.main-nav');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    nav.classList.toggle('open');
+  });
+});
+</script>
+
 <body>
 
 <!-- Header -->
