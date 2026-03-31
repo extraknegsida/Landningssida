@@ -4,81 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Användarvillkor | Extrakneg</title>
-
-  <link rel="icon" href="assets/images/favicon.ico">  
-  
   <link rel="stylesheet" href="style.css">
-  <style>
-    .terms-container {
-      max-width: 900px;
-      margin: 100px auto;
-      padding: 0 20px;
-      line-height: 1.7;
-      color: #333;
-    }
-
-    .terms-container h1 {
-      text-align: center;
-      font-size: 2.2rem;
-      margin-bottom: 30px;
-      color: #1e293b;
-    }
-
-    .terms-container h2 {
-      margin-top: 30px;
-      color: #1e293b;
-      font-size: 1.3rem;
-    }
-
-    .terms-container h3 {
-      margin-top: 20px;
-      font-size: 1.1rem;
-      color: #334155;
-    }
-
-    .terms-container p {
-      margin-bottom: 15px;
-    }
-
-    .terms-container ul {
-      margin-left: 20px;
-      margin-bottom: 20px;
-    }
-
-    .last-updated {
-      text-align: center;
-      margin-top: 50px;
-      font-size: 0.9rem;
-      color: #6b7280;
-    }
-
-    @media (max-width: 768px) {
-      .terms-container {
-        margin: 60px auto;
-      }
-
-      .terms-container h1 {
-        font-size: 1.8rem;
-      }
-
-      .terms-container h2 {
-        font-size: 1.1rem;
-      }
-    }
-  </style>
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const hamburger = document.querySelector('.hamburger');
-  const nav = document.querySelector('.main-nav');
-
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    nav.classList.toggle('open');
-  });
-});
-</script>
 
 <body>
 
@@ -107,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
   <!-- HUVUDINNEHÅLL -->
-  <main class="terms-container">
+  <main class="legal-container">
     <h1>Användarvillkor för Extrakneg</h1>
 
     <h2>1. Introduktion</h2>
@@ -121,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <p>"Annonsör" avser den som lägger upp en annons om ett uppdrag.</p>
     <p>"Hjälpare" avser den som åtar sig att utföra ett uppdrag.</p>
     <p>"Tjänst" avser arbete eller uppdrag som erbjuds eller utförs via Plattformen.</p>
-    <p>"Avgift" avser den serviceavgift (t.ex. 15 %) som Extrakneg tar ut för att möjliggöra plattformens funktioner och betalningsförmedling.</p>
+    <p>"Avgift" avser den serviceavgift (t.ex. 20 %) som Extrakneg tar ut för att möjliggöra plattformens funktioner och betalningsförmedling.</p>
 
     <h2>3. Plattformens roll</h2>
     <p>Extrakneg tillhandahåller en teknisk lösning som matchar uppdrag mellan privatpersoner.</p>
@@ -183,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <p>Extrakneg förbehåller sig rätten att uppdatera dessa Villkor. Användare informeras om större ändringar via appen eller e-post. Fortsatt användning efter ändringar innebär att du godkänner de nya Villkoren.</p>
 
     <h2>11. Kontakt</h2>
-    <p>E-post: <a href="mailto:info@extrakneg.com">info@extrakneg.com</a></p>
+    <p>E-post: <a href="mailto:info@extrakneg.se">info@extrakneg.se</a></p>
     <p>Adress: Skogängsvägen 46A, 163 48 Spånga</p>
 
     <p class="last-updated">Senast uppdaterad: 31 oktober 2025</p>
@@ -206,7 +135,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     <!-- Mitten: länkar -->
     <div class="footer-center footer-links">
-    <div class="footer-center footer-links">
       <a href="anvandarvillkor.html">Användarvillkor</a>
       <a href="integritetspolicy.html">Integritetspolicy</a>
     </div>
@@ -215,8 +143,8 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="footer-right">
       <p class="social-text">Ladda ner appen:</p>
       <div class="app-buttons-section">
-        <a href="#"><img src="assets/images/appstore.svg" alt="Ladda ner på App Store"></a>
-        <a href="https://play.google.com/store/apps/details?id=com.Extrakneg.android&pcampaignid=web_share"><img src="assets/images/googleplay.png" alt="Ladda ner på Google Play"></a>
+        <a href="https://apps.apple.com/app/extrakneg/id6758298853" target="_blank" rel="noopener noreferrer"><img src="assets/images/appstore.svg" alt="Ladda ner på App Store"></a>
+        <a href="https://play.google.com/store/apps/details?id=com.Extrakneg.android&pcampaignid=web_share" target="_blank" rel="noopener noreferrer"><img src="assets/images/googleplay.png" alt="Ladda ner på Google Play"></a>
       </div>
 
       <p class="social-text">Följ oss:</p>

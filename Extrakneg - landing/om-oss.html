@@ -3,30 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Om oss – Extrakneg</title>
-
-  <link rel="icon" href="assets/images/favicon.ico">
-
-  <link rel="preload" as="image" href="assets/photos/about-hero.jpg">
+  <title>Om oss – Extrakneg Handelsbolag</title>
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+  <link rel="preload" as="image" href="assets/photos/about-hero.webp" fetchpriority="high">
+  <script src="script.js" defer></script>
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const hamburger = document.querySelector('.hamburger');
-  const nav = document.querySelector('.main-nav');
-
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    nav.classList.toggle('open');
-  });
-});
-</script>
 
 <body>
 
@@ -53,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </header>
 
   <!-- Hero-sektion -->
-  <section class="hero home" style="background: url('assets/photos/about-hero.jpg') no-repeat center center/cover;">
+  <section class="hero home hero-about">
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1>Om Extrakneg</h1>
@@ -61,37 +47,107 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
   </section>
 
-  <!-- Vår historia / Intro -->
-  <section class="intro-section" style="text-align: center; max-width: 800px; margin: 3rem auto;">
-    <h2>Vår historia</h2>
-    <p>
-      Extrakneg grundades med visionen att göra det enkelt för människor att få hjälp med vardagssysslor och samtidigt skapa möjligheter för andra att tjäna pengar på sina egna villkor. Vi tror på trygghet, enkelhet och gemenskap.
-    </p>
-  </section>
+<section class="story-section">
+  <div class="story-shell">
+    <div class="story-header">
+      <span class="story-eyebrow">Vår historia</span>
+      <h2>När utmaningar uppstår, skapar vi möjligheter</h2>
+      <p>
+        Extrakneg föddes ur en enkel insikt: att matcha människors kompetens med vardagens behov skapar verkliga möjligheter.
+      </p>
+    </div>
+
+    <div class="story-layout">
+      <aside class="story-aside">
+        <div class="story-stat-card">
+          <span class="story-stat-label">Startpunkt</span>
+          <strong>31 oktober 2024</strong>
+          <p>Datumet då idén om Extrakneg började ta konkret form.</p>
+        </div>
+
+        <div class="story-quote-card">
+          <p>"Där någon behöver hjälp, hittar någon annan sin möjlighet."</p>
+        </div>
+      </aside>
+
+      <div class="story-content">
+        <div class="story-lead">
+          <p>
+            Idén till Extrakneg föddes den 31 oktober 2024, i en tid då arbetslösheten i Sverige var högt aktuell. Många människor, trots kompetens och vilja att arbeta, hade svårt att få jobb. Samtidigt steg priserna på både produkter och tjänster, vilket gjorde att ekonomin för många hushåll blev allt mer ansträngd och behovet av att öka sin inkomst blev tydligare än någonsin.
+          </p>
+        </div>
+
+        <div class="story-grid">
+          <article class="story-card">
+            <span class="story-step">01</span>
+            <h3>Verkligheten</h3>
+            <p>
+              Det var i denna verklighet som medgrundaren Rogerio Silva insåg något tydligt. Vi lever i en tid där behov och möjligheter existerar sida vid sida. Det finns människor som behöver hjälp i sin vardag, och samtidigt finns det andra med tiden, viljan och kompetensen att hjälpa och därigenom skapa en extra inkomst.
+            </p>
+          </article>
+
+          <article class="story-card">
+            <span class="story-step">02</span>
+            <h3>Insikten</h3>
+            <p>
+              Tanken blev tydlig. Där någon behöver hjälp, hittar någon annan sin möjlighet.
+            </p>
+          </article>
+
+          <article class="story-card">
+            <span class="story-step">03</span>
+            <h3>Bygget</h3>
+            <p>
+              Kort därefter tog Rogerio kontakt med sin bror och medgrundare Gerson Silva. Tillsammans började de skissa på en idé om en plattform som kunde föra dessa människor samman på ett enkelt, tryggt och tillgängligt sätt. Det som började som en enkel insikt utvecklades snabbt till en gemensam vision.
+            </p>
+          </article>
+
+          <article class="story-card">
+            <span class="story-step">04</span>
+            <h3>Win-win</h3>
+            <p>
+              Grunden i Extrakneg är enkel. Den som behöver hjälp kan själv sätta ett pris som ofta är lägre än traditionella alternativ, samtidigt som den som söker möjligheter får en chans att tjäna pengar, bygga erfarenhet och skapa en extra inkomst. Det blir en naturlig win-win där båda parter får ut värde.
+            </p>
+          </article>
+        </div>
+
+        <div class="story-ending">
+          <p>
+            Extrakneg handlar i grunden om något större än bara uppdrag. Det handlar om att skapa möjligheter där de saknas, att göra vardagen enklare för fler och att bygga ett samhälle där människor hjälper varandra och samtidigt stärker sin egen situation. Där någon behöver hjälp, börjar någon annans möjlighet.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
   <!-- Värderingar -->
-  <section class="values-section" style="text-align: center; max-width: 900px; margin: 3rem auto;">
-    <h2>Våra värderingar</h2>
-    <div class="values-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-top: 2rem;">
-      <div class="value-card" style="flex: 1 1 200px; max-width: 250px; background: #fffaf0; border-radius: 12px; padding: 1.5rem; box-shadow: 0 3px 10px rgba(0,0,0,0.05);">
-        <i class="fas fa-shield-alt icon" style="font-size: 2rem; color: #F9C672;"></i>
-        <h3 style="margin: 1rem 0 0.5rem 0;">Trygghet</h3>
-        <p>Nolltolerans mot bedrägerier och olagliga handlingar. ID-verifiering för allas trygghet.</p>
-      </div>
-      <div class="value-card" style="flex: 1 1 200px; max-width: 250px; background: #fffaf0; border-radius: 12px; padding: 1.5rem; box-shadow: 0 3px 10px rgba(0,0,0,0.05);">
-        <i class="fas fa-hand-holding-heart icon" style="font-size: 2rem; color: #F9C672;"></i>
-        <h3 style="margin: 1rem 0 0.5rem 0;">Gemenskap</h3>
-        <p>Vi skapar en plattform där människor hjälper varandra och bygger relationer.</p>
-      </div>
-      <div class="value-card" style="flex: 1 1 200px; max-width: 250px; background: #fffaf0; border-radius: 12px; padding: 1.5rem; box-shadow: 0 3px 10px rgba(0,0,0,0.05);">
-        <i class="fas fa-clock icon" style="font-size: 2rem; color: #F9C672;"></i>
-        <h3 style="margin: 1rem 0 0.5rem 0;">Flexibilitet</h3>
-        <p>Både hjälpare och kunder bestämmer själva tid och omfattning av uppdrag.</p>
-      </div>
-      <div class="value-card" style="flex: 1 1 200px; max-width: 250px; background: #fffaf0; border-radius: 12px; padding: 1.5rem; box-shadow: 0 3px 10px rgba(0,0,0,0.05);">
-        <i class="fas fa-star icon" style="font-size: 2rem; color: #F9C672;"></i>
-        <h3 style="margin: 1rem 0 0.5rem 0;">Kvalitet</h3>
-        <p>Vi uppmuntrar omdömen och återkoppling för att säkerställa hög kvalitet.</p>
+  <section class="values-section">
+    <div class="values-shell">
+      <p class="section-kicker">Det som vägleder oss</p>
+      <h2>Våra värderingar</h2>
+      <p class="values-intro">Allt vi bygger utgår från trygghet, gemenskap och möjligheten att göra vardagen enklare för fler.</p>
+      <div class="values-grid">
+        <div class="value-card">
+          <i class="fas fa-shield-alt icon"></i>
+          <h3>Trygghet</h3>
+          <p>Nolltolerans mot bedrägerier och olagliga handlingar. ID-verifiering för allas trygghet.</p>
+        </div>
+        <div class="value-card">
+          <i class="fas fa-hand-holding-heart icon"></i>
+          <h3>Gemenskap</h3>
+          <p>Vi skapar en plattform där människor hjälper varandra och bygger relationer.</p>
+        </div>
+        <div class="value-card">
+          <i class="fas fa-clock icon"></i>
+          <h3>Flexibilitet</h3>
+          <p>Både hjälpare och kunder bestämmer själva tid och omfattning av uppdrag.</p>
+        </div>
+        <div class="value-card">
+          <i class="fas fa-star icon"></i>
+          <h3>Kvalitet</h3>
+          <p>Vi uppmuntrar omdömen och återkoppling för att säkerställa hög kvalitet.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -102,8 +158,8 @@ document.addEventListener('DOMContentLoaded', function() {
   <p>Vill du tjäna extra pengar och hjälpa människor i din närhet? Ladda ner appen och börja idag – enkelt, tryggt och flexibelt.</p>
   
   <div class="app-buttons">
-    <a href="#"><img src="assets/images/appstore.svg" alt="Ladda ner på App Store"></a>
-    <a href="#"><img src="assets/images/googleplay.png" alt="Ladda ner på Google Play"></a>
+    <a href="https://apps.apple.com/app/extrakneg/id6758298853" target="_blank" rel="noopener noreferrer"><img src="assets/images/appstore.svg" alt="Ladda ner på App Store"></a>
+    <a href="https://play.google.com/store/apps/details?id=com.Extrakneg.android&pcampaignid=web_share" target="_blank" rel="noopener noreferrer"><img src="assets/images/googleplay.png" alt="Ladda ner på Google Play"></a>
   </div>
 </section>
 
@@ -132,8 +188,8 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="footer-right">
       <p class="social-text">Ladda ner appen:</p>
       <div class="app-buttons-section">
-        <a href="#"><img src="assets/images/appstore.svg" alt="Ladda ner på App Store"></a>
-        <a href="https://play.google.com/store/apps/details?id=com.Extrakneg.android&pcampaignid=web_share"><img src="assets/images/googleplay.png" alt="Ladda ner på Google Play"></a>
+        <a href="https://apps.apple.com/app/extrakneg/id6758298853" target="_blank" rel="noopener noreferrer"><img src="assets/images/appstore.svg" alt="Ladda ner på App Store"></a>
+        <a href="https://play.google.com/store/apps/details?id=com.Extrakneg.android&pcampaignid=web_share" target="_blank" rel="noopener noreferrer"><img src="assets/images/googleplay.png" alt="Ladda ner på Google Play"></a>
       </div>
 
       <p class="social-text">Följ oss:</p>
@@ -153,6 +209,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
 </body>
 </html>
-
-
-

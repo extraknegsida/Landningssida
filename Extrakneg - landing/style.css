@@ -12,6 +12,14 @@ body {
   color: #333333;
 }
 
+:root {
+  --brand-gold: #F9C672;
+  --brand-charcoal: #322D2A;
+  --brand-cream: #F4EFE6;
+  --brand-cream-light: #FBF8F2;
+  --brand-text-soft: #5C524B;
+}
+
 /* -------------------- Header -------------------- */
 header {
   position: sticky;
@@ -132,13 +140,15 @@ nav.main-nav a:hover {
 /* -------------------- Hero -------------------- */
 .hero.home {
   position: relative;
-  background: url("assets/photos/hero1.jpg") no-repeat center center/cover;
-  height: 60vh;
+  background: url("assets/photos/hero1.webp") no-repeat center center/cover;
+  background-color: var(--brand-charcoal);
+  min-height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   width: 100%;
+  overflow: hidden;
 }
 
 .hero-overlay {
@@ -147,7 +157,9 @@ nav.main-nav a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3));
+  background:
+    linear-gradient(135deg, rgba(50, 45, 42, 0.76), rgba(50, 45, 42, 0.36)),
+    radial-gradient(circle at top right, rgba(249, 198, 114, 0.3), transparent 30%);
 }
 
 .hero-content {
@@ -179,7 +191,7 @@ nav.main-nav a:hover {
 
 .hero-content .subtitle {
   font-size: 1.25rem;
-  color: #ffffff;
+  color: #f7efe4;
   text-shadow: 1px 1px 6px rgba(0,0,0,0.4);
   max-width: 700px;
   margin: 0 auto;
@@ -200,12 +212,12 @@ nav.main-nav a:hover {
 }
 
 .hero-content .app-buttons img:hover {
-  transform: scale(1.05);
+  transform: translateY(-3px) scale(1.03);
 }
 
 /* Highlight-länkar i hero */
 .hero-content .highlight-link {
-  color: #F9C672;           /* samma som tidigare highlight */
+  color: var(--brand-gold);
   text-decoration: none;
   font-weight: 700;
   transition: color 0.3s, transform 0.2s;
@@ -213,24 +225,37 @@ nav.main-nav a:hover {
 }
 
 .hero-content .highlight-link:hover {
-  color: #ffffff;           /* ändra färg vid hover */
-  background-color: #F9C672; /* liten bakgrund för hover */
+  color: var(--brand-charcoal);
+  background-color: var(--brand-gold);
   padding: 0 4px;
   border-radius: 4px;
   transform: scale(1.05);
 }
 
+.hero.home.hero-help {
+  background: url("assets/photos/help-hero.webp") no-repeat center center/cover;
+}
+
+.hero.home.hero-helper {
+  background: url("assets/photos/helper-hero.webp") no-repeat center center/cover;
+}
+
+.hero.home.hero-about {
+  background: url("assets/photos/about-hero.webp") no-repeat center center/cover;
+}
+
 
 /* -------------------- Intro-sektion -------------------- */
 .intro-section {
-  background: linear-gradient(135deg, #fffaf0, #fef9f3);
+  background: linear-gradient(135deg, #fbf8f1, #f2eadf);
   padding: 4rem 2rem;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  border-radius: 24px;
+  box-shadow: 0 10px 26px rgba(50,45,42,0.06);
   max-width: 900px;
   margin: -3rem auto 3rem;
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid rgba(50,45,42,0.08);
 }
 
 .intro-section:hover {
@@ -241,13 +266,13 @@ nav.main-nav a:hover {
 .intro-section h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #222;
+  color: var(--brand-charcoal);
 }
 
 .intro-section p {
   font-size: 1.15rem;
   line-height: 1.7;
-  color: #333;
+  color: var(--brand-text-soft);
 }
 
 /* -------------------- Fördelar / Benefits på hem -------------------- */
@@ -266,33 +291,35 @@ nav.main-nav a:hover {
 }
 
 .benefit-card {
-  background-color: #ffffff;
-  border-radius: 15px;
+  background: linear-gradient(180deg, #fffdfa, #f7efe4);
+  border-radius: 22px;
   padding: 2rem 1.5rem;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 8px 22px rgba(50,45,42,0.05);
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  border: 1px solid rgba(50,45,42,0.08);
 }
 
 .benefit-card:hover {
   transform: translateY(-7px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 14px 30px rgba(50,45,42,0.09);
+  border-color: rgba(249,198,114,0.45);
 }
 
 .benefit-card .icon {
   font-size: 2.5rem;
-  color: #F9C672;
+  color: var(--brand-gold);
   margin-bottom: 0.8rem;
 }
 
 .benefit-card h3 {
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
-  color: #222;
+  color: var(--brand-charcoal);
 }
 
 .benefit-card p {
   font-size: 1rem;
-  color: #555;
+  color: var(--brand-text-soft);
   line-height: 1.6;
 }
 
@@ -300,14 +327,18 @@ nav.main-nav a:hover {
 .benefits-section {
   max-width: 1100px;
   margin: 3rem auto;
-  padding: 2rem;
+  padding: 2.5rem;
   text-align: center;
+  background: linear-gradient(135deg, #fffdfa, #f3ebe0);
+  border-radius: 28px;
+  box-shadow: 0 12px 30px rgba(50,45,42,0.05);
+  border: 1px solid rgba(50,45,42,0.08);
 }
 
 .benefits-section h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
-  color: #222;
+  color: var(--brand-charcoal);
   position: relative;
 }
 
@@ -316,7 +347,7 @@ nav.main-nav a:hover {
   display: block;
   width: 60px;
   height: 4px;
-  background-color: #F9C672;
+  background-color: var(--brand-gold);
   margin: 10px auto 0 auto;
   border-radius: 2px;
 }
@@ -366,15 +397,16 @@ nav.main-nav a:hover {
   margin: 3rem auto;
   text-align: center;
   padding: 3rem 2rem;
-  background: linear-gradient(135deg, #fdf6f0, #fff2e6);
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  background: linear-gradient(135deg, #fbf7ef, #efe5d7);
+  border-radius: 28px;
+  box-shadow: 0 12px 30px rgba(50,45,42,0.05);
+  border: 1px solid rgba(50,45,42,0.08);
 }
 
 .how-it-works-section h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
-  color: #222;
+  color: var(--brand-charcoal);
   position: relative;
 }
 
@@ -383,7 +415,7 @@ nav.main-nav a:hover {
   display: block;
   width: 60px;
   height: 4px;
-  background-color: #F9C672;
+  background-color: var(--brand-gold);
   margin: 10px auto 0 auto;
   border-radius: 2px;
 }
@@ -398,23 +430,24 @@ nav.main-nav a:hover {
 }
 
 .how-card {
-  background-color: #ffffff;
-  border-radius: 15px;
+  background: rgba(255, 251, 245, 0.92);
+  border-radius: 24px;
   padding: 2rem 1.5rem;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 8px 22px rgba(50,45,42,0.05);
   transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
   text-align: center;
+  border: 1px solid rgba(50,45,42,0.08);
 }
 
 .how-card:hover {
   transform: translateY(-7px) scale(1.02);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-  background-color: #fff8f0;
+  box-shadow: 0 14px 28px rgba(50,45,42,0.1);
+  background-color: #fff7ed;
 }
 
 .how-card .icon {
   font-size: 3rem;
-  color: #F9C672;
+  color: var(--brand-gold);
   margin-bottom: 1rem;
   transition: transform 0.3s;
 }
@@ -426,7 +459,7 @@ nav.main-nav a:hover {
 .how-card h3 {
   font-size: 1.25rem;
   margin-bottom: 1rem;
-  color: #222;
+  color: var(--brand-charcoal);
 }
 
 /* --- Lista med steg --- */
@@ -443,12 +476,12 @@ nav.main-nav a:hover {
   gap: 0.6rem;
   margin-bottom: 0.8rem;
   font-size: 1rem;
-  color: #555;
+  color: var(--brand-text-soft);
   line-height: 1.5;
 }
 
 .how-steps i {
-  color: #F9C672;
+  color: var(--brand-gold);
   font-size: 1.1rem;
   margin-top: 0.2rem;
 }
@@ -483,12 +516,17 @@ nav.main-nav a:hover {
   max-width: 900px;
   margin: 3rem auto;
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 2.5rem 1.5rem;
+  background: linear-gradient(135deg, #fffdf9, #f3eadf);
+  border-radius: 28px;
+  box-shadow: 0 12px 30px rgba(50,45,42,0.05);
+  border: 1px solid rgba(50,45,42,0.08);
 }
 
 .testimonials h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
+  color: var(--brand-charcoal);
 }
 
 .testimonial-cards {
@@ -498,12 +536,14 @@ nav.main-nav a:hover {
 }
 
 .testimonial-card {
-  background-color: #fffaf0;
-  border-radius: 15px;
+  background: rgba(255, 251, 244, 0.96);
+  border-radius: 22px;
   padding: 2rem 1.5rem;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 8px 22px rgba(50,45,42,0.05);
   font-style: italic;
   text-align: center;
+  border: 1px solid rgba(50,45,42,0.08);
+  color: var(--brand-charcoal);
 }
 
 @media (max-width: 768px) {
@@ -518,7 +558,7 @@ nav.main-nav a:hover {
 
 /* -------------------- Footer -------------------- */
 footer {
-  background-color: #222;
+  background: linear-gradient(180deg, var(--brand-charcoal), #272220);
   color: white;
   padding: 3rem 1.5rem;
   font-size: 0.9rem;
@@ -558,7 +598,7 @@ footer {
 
 .footer-email i {
   margin-right: 8px;
-  color: #f39c12;
+  color: var(--brand-gold);
 }
 
 .footer-email a {
@@ -589,7 +629,7 @@ footer {
 }
 
 .footer-links a:hover {
-  color: #f39c12;
+  color: var(--brand-gold);
 }
 
 /* Höger: app-knappar + sociala */
@@ -673,19 +713,21 @@ footer {
 
 /* -------------------- FAQ Sektion-------------------- */
 .faq-section {
-  background: #fffaf0;          /* mjukare, varm bakgrund */
-  border-radius: 15px;          /* mjuka hörn på hela sektionen */
+  background: linear-gradient(135deg, #fffdf8, #f2eade);
+  border-radius: 28px;
   padding: 4rem 1.5rem;
   text-align: center;
   max-width: 900px;
   margin: 3rem auto;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05); /* valfri mjuk skugga */
+  box-shadow: 0 12px 30px rgba(50,45,42,0.05);
+  border: 1px solid rgba(50,45,42,0.08);
 }
 
 .faq-section h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
   position: relative;
+  color: var(--brand-charcoal);
 }
 
 .faq-section h2::after {
@@ -693,7 +735,7 @@ footer {
   display: block;
   width: 60px;
   height: 4px;
-  background-color: #F9C672;
+  background-color: var(--brand-gold);
   margin: 10px auto 0 auto;
   border-radius: 2px;
 }
@@ -705,17 +747,19 @@ footer {
 }
 
 .faq-item {
-  background: #ffffff;
-  border-radius: 12px;
+  background: rgba(255, 252, 247, 0.96);
+  border-radius: 18px;
   padding: 1rem 1.5rem;
   cursor: pointer;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  transition: transform 0.2s, box-shadow 0.3s;
+  box-shadow: 0 8px 22px rgba(50,45,42,0.05);
+  transition: transform 0.2s, box-shadow 0.3s, border-color 0.3s;
+  border: 1px solid rgba(50,45,42,0.08);
 }
 
 .faq-item:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 12px 24px rgba(50,45,42,0.08);
+  border-color: rgba(249,198,114,0.45);
 }
 
 .faq-question {
@@ -723,11 +767,11 @@ footer {
   justify-content: space-between;
   align-items: center;
   font-weight: 700;
-  color: #222;
+  color: var(--brand-charcoal);
 }
 
 .faq-question i {
-  color: #F9C672;
+  color: var(--brand-gold);
   transition: transform 0.3s;
 }
 
@@ -739,7 +783,7 @@ footer {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
-  color: #555;
+  color: var(--brand-text-soft);
   line-height: 1.6;
   font-size: 0.95rem;
   margin-top: 0;
@@ -750,6 +794,50 @@ footer {
   max-height: 500px;
   padding-top: 0.5rem;
   opacity: 1;
+}
+
+/* -------------------- Juridiska sidor -------------------- */
+.legal-container {
+  max-width: 900px;
+  margin: 100px auto;
+  padding: 0 20px;
+  line-height: 1.7;
+  color: #333;
+}
+
+.legal-container h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: var(--brand-charcoal);
+}
+
+.legal-container h2 {
+  margin-top: 30px;
+  color: var(--brand-charcoal);
+  font-size: 1.3rem;
+}
+
+.legal-container h3 {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: var(--brand-text-soft);
+}
+
+.legal-container p {
+  margin-bottom: 15px;
+}
+
+.legal-container ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.last-updated {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 0.9rem;
+  color: #6b7280;
 }
 
 /* Mobilanpassning */
@@ -769,6 +857,18 @@ footer {
   .faq-question {
     font-size: 1rem;
   }
+
+  .legal-container {
+    margin: 60px auto;
+  }
+
+  .legal-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .legal-container h2 {
+    font-size: 1.1rem;
+  }
 }
 
 /* -------------------- Om oss CTA -------------------- */
@@ -777,10 +877,11 @@ footer {
   margin: 3rem auto;
   padding: 2rem 1.5rem;
   text-align: center;
-  background: #fff8f0;          /* varm, mjuk ton som FAQ och hur funkar det */
+  background: linear-gradient(135deg, #fbf7ef, #f4ede1);
   border-radius: 15px;          /* matchar resten av sektionerna */
   box-shadow: 0 8px 20px rgba(0,0,0,0.05);
   transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid rgba(50, 45, 42, 0.08);
 }
 
 .about-cta:hover {
@@ -791,13 +892,13 @@ footer {
 .about-cta h2 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
-  color: #222;
+  color: var(--brand-charcoal);
 }
 
 .about-cta p {
   font-size: 1rem;
   margin-bottom: 1.5rem;
-  color: #555;
+  color: var(--brand-text-soft);
 }
 
 .about-cta .app-buttons {
@@ -819,6 +920,252 @@ footer {
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
 
+/* -------------------- Om oss / Story -------------------- */
+.story-section {
+  padding: 4rem 1.5rem 1rem;
+}
+
+.story-shell {
+  max-width: 1180px;
+  margin: -3rem auto 0;
+  padding: 3rem;
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at top left, rgba(249, 198, 114, 0.22), transparent 28%),
+    linear-gradient(135deg, var(--brand-cream-light), var(--brand-cream) 58%, #efe6d8);
+  box-shadow: 0 18px 45px rgba(50, 45, 42, 0.08);
+  border: 1px solid rgba(50, 45, 42, 0.08);
+}
+
+.story-header {
+  max-width: 760px;
+  margin-bottom: 2.5rem;
+}
+
+.story-eyebrow {
+  display: inline-block;
+  margin-bottom: 0.9rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(249, 198, 114, 0.28);
+  color: var(--brand-charcoal);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.story-header h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.1;
+  color: var(--brand-charcoal);
+  margin-bottom: 1rem;
+}
+
+.story-header p {
+  font-size: 1.08rem;
+  line-height: 1.8;
+  color: var(--brand-text-soft);
+}
+
+.story-layout {
+  display: grid;
+  grid-template-columns: minmax(220px, 300px) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.story-aside {
+  display: grid;
+  gap: 1.2rem;
+  position: sticky;
+  top: 110px;
+}
+
+.story-stat-card,
+.story-quote-card,
+.story-card,
+.story-ending,
+.value-card {
+  border: 1px solid rgba(50, 45, 42, 0.08);
+}
+
+.story-stat-card,
+.story-quote-card {
+  padding: 1.4rem;
+  border-radius: 22px;
+  background: rgba(255, 251, 245, 0.92);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.04);
+}
+
+.story-stat-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--brand-text-soft);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.story-stat-card strong {
+  display: block;
+  margin-bottom: 0.55rem;
+  color: var(--brand-charcoal);
+  font-size: 1.35rem;
+}
+
+.story-stat-card p,
+.story-quote-card p {
+  color: var(--brand-text-soft);
+  line-height: 1.7;
+}
+
+.story-quote-card p {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--brand-charcoal);
+}
+
+.story-content {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.story-lead {
+  padding: 1.6rem 1.8rem;
+  border-left: 4px solid var(--brand-gold);
+  border-radius: 0 22px 22px 0;
+  background: rgba(255, 250, 242, 0.88);
+}
+
+.story-lead p {
+  font-size: 1.08rem;
+  line-height: 1.85;
+  color: var(--brand-charcoal);
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.story-card {
+  height: 100%;
+  padding: 1.6rem;
+  border-radius: 24px;
+  background: rgba(255, 252, 247, 0.96);
+  box-shadow: 0 10px 24px rgba(50, 45, 42, 0.05);
+}
+
+.story-step {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  background: var(--brand-gold);
+  color: var(--brand-charcoal);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.story-card h3 {
+  margin-bottom: 0.7rem;
+  color: var(--brand-charcoal);
+  font-size: 1.25rem;
+}
+
+.story-card p {
+  color: var(--brand-text-soft);
+  line-height: 1.75;
+}
+
+.story-ending {
+  padding: 1.8rem;
+  border-radius: 24px;
+  background: linear-gradient(135deg, var(--brand-charcoal), #453d39);
+  box-shadow: 0 14px 30px rgba(50, 45, 42, 0.18);
+}
+
+.story-ending p {
+  color: #fdf7ef;
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+
+/* -------------------- Värderingar -------------------- */
+.values-section {
+  max-width: 1180px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+.values-shell {
+  padding: 2.5rem;
+  border-radius: 28px;
+  background: linear-gradient(180deg, #fffdf8, #f5eee3);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+  text-align: center;
+  border: 1px solid rgba(50, 45, 42, 0.08);
+}
+
+.values-section h2 {
+  font-size: 2rem;
+  color: var(--brand-charcoal);
+}
+
+.section-kicker {
+  display: inline-block;
+  margin-bottom: 0.9rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(249, 198, 114, 0.28);
+  color: var(--brand-charcoal);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.values-intro {
+  max-width: 680px;
+  margin: 0.9rem auto 0;
+  color: var(--brand-text-soft);
+  line-height: 1.8;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.value-card {
+  padding: 1.6rem 1.3rem;
+  border-radius: 22px;
+  background: #fffaf2;
+  box-shadow: 0 10px 22px rgba(50, 45, 42, 0.05);
+}
+
+.value-card .icon {
+  font-size: 2rem;
+  color: var(--brand-gold);
+}
+
+.value-card h3 {
+  margin: 1rem 0 0.5rem 0;
+  color: var(--brand-charcoal);
+}
+
+.value-card p {
+  color: var(--brand-text-soft);
+  line-height: 1.7;
+}
+
 /* Mobilanpassning */
 @media (max-width: 768px) {
   .about-cta {
@@ -835,6 +1182,63 @@ footer {
 
   .about-cta .app-buttons img {
     height: 35px;
+  }
+
+  .story-section {
+    padding: 3rem 1rem 1rem;
+  }
+
+  .story-shell {
+    margin-top: -2rem;
+    padding: 1.5rem;
+    border-radius: 22px;
+  }
+
+  .story-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .story-aside {
+    position: static;
+  }
+
+  .story-grid,
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .story-header h2,
+  .values-section h2 {
+    font-size: 1.7rem;
+  }
+
+  .story-lead {
+    padding: 1.3rem 1.1rem 1.3rem 1.25rem;
+  }
+
+  .values-shell {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .story-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .story-aside {
+    position: static;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .story-aside {
+    grid-template-columns: 1fr;
   }
 }
 
