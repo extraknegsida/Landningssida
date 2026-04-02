@@ -202,12 +202,21 @@ nav.main-nav a:hover {
   gap: 15px;
   justify-content: center;
   margin-top: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hero-content .app-buttons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-content .app-buttons img {
-  height: 50px;
-  width: 150px;
+  width: 160px;
+  height: 52px;
   object-fit: contain;
+  display: block;
   transition: transform 0.3s;
 }
 
@@ -488,6 +497,66 @@ nav.main-nav a:hover {
 
 /* -------------------- Mobil -------------------- */
 @media (max-width: 768px) {
+  .hero.home {
+    min-height: 52vh;
+  }
+
+  .hero-content {
+    gap: 0.85rem;
+    padding: 0 16px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+    line-height: 1.15;
+  }
+
+  .hero-content .subtitle {
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  .hero-content .app-buttons {
+    gap: 10px;
+    margin-top: 0.35rem;
+  }
+
+  .hero-content .app-buttons img {
+    width: 140px;
+    height: 43px;
+  }
+
+  .intro-section {
+    margin: -2rem 1rem 2rem;
+    padding: 2.25rem 1.15rem;
+    border-radius: 20px;
+  }
+
+  .intro-section h2 {
+    font-size: 1.7rem;
+  }
+
+  .intro-section p {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .benefits {
+    margin-bottom: 2rem;
+    padding: 0 14px;
+  }
+
+  .benefits-section {
+    margin: 2rem 1rem;
+    padding: 2rem 1rem;
+    border-radius: 22px;
+  }
+
+  .benefits-section h2 {
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
+  }
+
   .how-grid {
     grid-template-columns: 1fr;
   }
@@ -503,10 +572,10 @@ nav.main-nav a:hover {
 
 @media (max-width: 480px) {
   .how-it-works-section {
-    padding: 2rem 1rem;
+    padding: 1.85rem 1rem;
   }
   .how-card {
-    padding: 1.5rem;
+    padding: 1.25rem 1rem;
   }
 }
 
@@ -551,8 +620,19 @@ nav.main-nav a:hover {
     grid-template-columns: 1fr;
   }
 
+  .testimonials {
+    margin: 2rem 1rem;
+    padding: 2rem 1rem;
+    border-radius: 22px;
+  }
+
+  .testimonials h2 {
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
+  }
+
   .testimonial-card {
-    padding: 1.5rem;
+    padding: 1.25rem 1rem;
   }
 }
 
@@ -643,12 +723,20 @@ footer {
   gap: 10px;
   justify-content: flex-end;
   margin-bottom: 1rem;
+  align-items: center;
+}
+
+.footer-right .app-buttons-section a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer-right .app-buttons-section img {
-  height: 40px;
-  width: auto;
+  width: 150px;
+  height: 46px;
   object-fit: contain;
+  display: block;
   transition: transform 0.3s;
 }
 
@@ -843,15 +931,18 @@ footer {
 /* Mobilanpassning */
 @media (max-width: 768px) {
   .faq-section {
-    padding: 3rem 1rem;
+    margin: 2rem 1rem;
+    padding: 2rem 1rem;
+    border-radius: 22px;
   }
 
   .faq-section h2 {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
   }
 
   .faq-item {
-    padding: 1rem;
+    padding: 0.95rem 1rem;
   }
 
   .faq-question {
@@ -905,13 +996,23 @@ footer {
   display: flex;
   justify-content: center;
   gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about-cta .app-buttons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .about-cta .app-buttons a img {
-  height: 45px;                  /* lite mindre än hero-sektionens */
-  width: auto;
+  width: 150px;
+  height: 46px;
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  object-fit: contain;
+  display: block;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
@@ -1169,6 +1270,7 @@ footer {
 /* Mobilanpassning */
 @media (max-width: 768px) {
   .about-cta {
+    margin: 2rem 1rem;
     padding: 1.5rem 1rem;
   }
 
@@ -1181,7 +1283,8 @@ footer {
   }
 
   .about-cta .app-buttons img {
-    height: 35px;
+    width: 140px;
+    height: 43px;
   }
 
   .story-section {
@@ -1285,12 +1388,13 @@ html, body {
 @media (max-width: 768px) {
   .benefit-grid {
     grid-template-columns: 1fr;
-    gap: 1rem;
-    padding: 0 10px;
+    gap: 0.85rem;
+    padding: 0;
+    align-items: stretch;
   }
 
   .benefit-card {
-    padding: 1.5rem;
+    padding: 1.15rem 1rem;
   }
 
   .benefit-card h3 {
@@ -1299,6 +1403,63 @@ html, body {
 
   .benefit-card p {
     font-size: 0.95rem;
+  }
+
+  .benefits .benefit-card {
+    width: 100%;
+    min-height: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.2rem;
+  }
+
+  .benefits .benefit-card .icon {
+    margin-bottom: 0.6rem;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+
+  .benefits-section .benefit-card {
+    width: 100%;
+    min-height: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.2rem;
+  }
+
+  .benefits-section .benefit-card .icon {
+    margin-bottom: 0.6rem;
+  }
+
+  .how-it-works-section {
+    margin: 2rem 1rem;
+    padding: 2rem 1rem;
+    border-radius: 22px;
+  }
+
+  .how-it-works-section h2 {
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .how-card {
+    padding: 1.25rem 1rem;
+  }
+
+  .how-card .icon {
+    font-size: 2.35rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .how-card h3 {
+    font-size: 1.1rem;
   }
 }
 
